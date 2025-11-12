@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Carta de Amor Digital</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffb6c1; /* Fondo rosado */
+    /* Fondo con patrón de corazones SVG repetido en el fondo rosado */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="%23ff6699" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-repeat: repeat;
+    background-size: 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sobre {
+    width: 600px; /* Tamaño similar a una hoja */
+    min-height: 800px;
+    background: white; /* Fondo blanco para la carta */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+  }
+  .sobre.abierto {
+    transform: rotateX(180deg);
+  }
+  .contenido, .tapa {
+    position: absolute;
+    width: calc(100% - 80px); /* Ajusta por padding */
+    height: calc(100% - 80px);
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    left: 40px;
+    top: 40px;
+  }
+  .tapa {
+    background: #ff6f91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  .contenido {
+    background: white;
+    transform: rotateX(180deg);
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="sobre" onclick="this.classList.toggle('abierto')">
+  <div class="tapa">Carta de Amor</div>
+  <div class="contenido">
+    <p>Hola amor, te quiero decir que te amo muchísisimo, y sé que no hay palabras existentes para decirte lo que siento por vos.</p>
+    <p>Posta, para mí sos la mujer más perfecta del mundo, y no te cambiaría por absolutamente nadie. Quiero que seas vos y siempre vos.</p>
+    <p>Quiero que seas la mujer que me acompañe y esté a mi lado siempre. Sé que somos chicos todavía, pero posta, ojalá pase así.</p>
+    <p>Y por más que estemos a distancia, sabé que soy tuyo y me enamoraste a pesar de no vernos y estar lejos.</p>
+    <p>Y a pesar de todo lo que pasamos seguimos juntos, y posta valoro muchísimo eso, porque pienso que si seguimos juntos es por una razón en específico.</p>
+    <p>También te quiero decir que no hay momento del día en el que no te piense, no hay día en que no desee verte, y no hay noche en que no desee estar durmiendo a tu lado o sueñe con vos.</p>
+    <p>Me levanto pensando en vos, en tu mensaje, y me duermo pensando en estar con vos.</p>
+    <p>Nada más, te quería decir eso y que sos la mujer de mis sueños, y perdón, me puse sentimental.</p>
+  </div>
+</div>
+
+<script>
+  // El clic sobre la carta la abre o cierra con animación 3D
+</script>
+
+</body>
